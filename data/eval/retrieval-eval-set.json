@@ -1,0 +1,62 @@
+{
+  "_comment": "Replace sourceText with real course material and cases with real questions a student would ask about it. mustContain: chunk must include ALL of these substrings (case-insensitive) to count as a hit. anyOf: chunk must include AT LEAST ONE (use for questions with multiple valid phrasings of the answer). Keep sourceText long enough to span several chunks (~2000 chars each) — a single-chunk source makes recall@k trivially 100% and defeats the point of the eval.",
+  "sourceText": "Cell biology studies the structure and function of cells, the basic unit of life. Every cell is bounded by a plasma membrane, a phospholipid bilayer that regulates what enters and exits through selective permeability. Embedded proteins in the membrane act as channels, pumps, and receptors, allowing the cell to communicate with and respond to its environment.\n\nMitochondria are the powerhouse of the cell. They generate most of the cell's supply of adenosine triphosphate (ATP) through a process called oxidative phosphorylation, which takes place across the inner mitochondrial membrane using the electron transport chain. Mitochondria have their own DNA, separate from the nucleus, which supports the endosymbiotic theory: the idea that mitochondria were once free-living bacteria engulfed by an ancestral eukaryotic cell roughly 1.5 to 2 billion years ago.\n\nCellular respiration is the broader process by which cells convert glucose and oxygen into ATP, carbon dioxide, and water. It occurs in three main stages: glycolysis in the cytoplasm, the citric acid cycle (also called the Krebs cycle) in the mitochondrial matrix, and oxidative phosphorylation in the inner mitochondrial membrane. Glycolysis alone produces a small net gain of ATP, while oxidative phosphorylation produces the majority.\n\nThe nucleus houses the cell's genetic material in the form of chromatin, which condenses into chromosomes during cell division. The nuclear envelope, a double membrane, separates the nucleus from the cytoplasm and is perforated by nuclear pores that regulate molecular traffic, including the export of messenger RNA to the cytoplasm for translation.\n\nDNA replication occurs before a cell divides, ensuring each daughter cell receives a complete copy of the genome. The enzyme DNA polymerase reads an existing strand as a template and synthesizes a new complementary strand. Because DNA polymerase can only add nucleotides in one direction, replication of the two strands is asymmetric: the leading strand is synthesized continuously, while the lagging strand is synthesized in short fragments called Okazaki fragments.\n\nRibosomes are the sites of protein synthesis. They can be found free-floating in the cytoplasm or attached to the rough endoplasmic reticulum, in which case the proteins produced are typically destined for secretion or for membranes. Ribosomes translate messenger RNA into polypeptide chains by reading codons three nucleotides at a time, each codon specifying one amino acid or a stop signal.\n\nThe Golgi apparatus modifies, sorts, and packages proteins and lipids for secretion or delivery to other organelles. Proteins typically arrive at the Golgi from the endoplasmic reticulum via transport vesicles, and leave in vesicles addressed to their final destination, whether that is the plasma membrane, a lysosome, or outside the cell entirely.\n\nChloroplasts, found in plant cells and algae, are the site of photosynthesis. They contain chlorophyll, the pigment that absorbs light energy, primarily in the blue and red wavelengths, and reflects green light, which is why plants appear green. Photosynthesis converts light energy, water, and carbon dioxide into glucose and oxygen. Like mitochondria, chloroplasts have their own DNA and are believed to have originated from engulfed cyanobacteria, a case of secondary endosymbiosis.\n\nThe cytoskeleton is a network of protein filaments, including microtubules, microfilaments, and intermediate filaments, that gives the cell its shape, enables intracellular transport, and, in the case of microtubules, forms the spindle apparatus that separates chromosomes during mitosis.\n\nPlant cells differ from animal cells in several key ways: plant cells have a rigid cell wall made primarily of cellulose outside the plasma membrane, a large central vacuole that maintains turgor pressure and stores waste products, and chloroplasts for photosynthesis, none of which are present in typical animal cells.\n\nLysosomes are membrane-bound organelles containing digestive enzymes that break down waste materials, cellular debris, and foreign invaders such as bacteria. They maintain an acidic internal pH, around 4.5 to 5, which is optimal for their hydrolytic enzymes and also protects the rest of the cell should a lysosome rupture, since the enzymes are far less active at the cell's neutral cytoplasmic pH.",
+  "cases": [
+    {
+      "question": "What do mitochondria do?",
+      "mustContain": ["powerhouse", "atp"]
+    },
+    {
+      "question": "What is the endosymbiotic theory?",
+      "mustContain": ["endosymbiotic", "engulfed"]
+    },
+    {
+      "question": "Where does protein synthesis happen in a cell?",
+      "anyOf": ["ribosome", "translate"]
+    },
+    {
+      "question": "Why do plants look green?",
+      "mustContain": ["chlorophyll", "green"]
+    },
+    {
+      "question": "What does the Golgi apparatus do?",
+      "mustContain": ["golgi"]
+    },
+    {
+      "question": "What separates the nucleus from the rest of the cell?",
+      "mustContain": ["nuclear envelope"]
+    },
+    {
+      "question": "What gives a cell its shape and helps transport things inside it?",
+      "mustContain": ["cytoskeleton"]
+    },
+    {
+      "question": "How many nucleotides make up a codon?",
+      "mustContain": ["three", "codon"]
+    },
+    {
+      "question": "What are Okazaki fragments?",
+      "mustContain": ["okazaki"]
+    },
+    {
+      "question": "What are the three stages of cellular respiration?",
+      "mustContain": ["glycolysis", "krebs"]
+    },
+    {
+      "question": "How is a plant cell different from an animal cell?",
+      "mustContain": ["cell wall"]
+    },
+    {
+      "question": "Why are lysosome enzymes safe if the lysosome breaks open?",
+      "mustContain": ["acidic"]
+    },
+    {
+      "question": "What enzyme copies DNA during replication?",
+      "mustContain": ["dna polymerase"]
+    },
+    {
+      "question": "What does a plant's central vacuole do?",
+      "mustContain": ["turgor"]
+    }
+  ]
+}
